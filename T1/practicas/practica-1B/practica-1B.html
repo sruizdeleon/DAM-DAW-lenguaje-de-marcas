@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sergio Ruiz de León</title>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+
+    /* VARIABLES */
+
+    :root{
+      /* Colores */
+      --principal-black: #111;
+      --principal-white: #fff;
+      --principal-color1: #fb505d;
+
+      /* Fuentes */
+      --font-lato: 'Lato', serif;
+      --font-merriweather: 'Merriweather', serif;
+
+      --size-huge: 4.5rem;
+      --size-extra-large: 5rem;
+      --size-large: 1.2rem;
+      --size-medium: 1rem;
+      --size-small: 2.2;
+      --size-extra-small: 2rem;
+    }
+
+
+    /* RESET SYLES */
+
+    * {
+        margin: 0px;
+        padding: 0px;
+        text-decoration: none;
+        list-style: none;
+        border-width: 0px;
+        background-color: transparent;
+    }
+
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Estilos genericos */
+
+    h1, h2, h3, h4, h5, h6 {
+        margin: 0px;
+        padding: 0px;
+        font-family: var(--font-lato);
+        color: var(--principal-black);
+    }
+
+    a {
+      margin: 0px;
+      padding: 0px;
+      font-family: var(--font-lato);
+      color: var(--principal-black);
+
+    }
+
+    p {
+        margin: 0px;
+        padding: 0px;
+        font-family: var(--font-lato);
+        color: var(--principal-black);
+    }
+
+
+
+
+    /* HEADER CLASES */
+
+    .navigation {
+      background-color: var(--principal-white);
+      justify-items: center;
+      align-content: center;
+      position: sticky;
+      width: 100%;
+      height: 10vh;
+      top: 0;
+    }
+
+    .navigation__container {
+      height: inherit;
+      width: 100%;
+      max-width: 1000px;
+
+      overflow: hidden;
+    }
+
+    .navigation__list {
+      height: inherit;
+      width: fit-content;
+      align-content: center;
+      float: left;
+      overflow: hidden;
+
+    }
+
+    .navigation__list-item {
+      height: inherit;
+      margin: 0 15px;
+      align-content: center;
+      float: left;
+
+      font-family: var(--font-lato);
+      font-size: var(--size-medium);
+      color: var(--principal-black);
+    }
+
+    .navigation__logo {
+      background-color:bisque;
+      height: 5vh;
+    }
+
+
+    .navigation__container-button {
+      float: right;
+      align-content: center;
+      height: inherit;
+      width: fit-content;
+
+    }
+
+    .navigation__button {
+      width: 130px;
+      padding: 10px;
+      border-radius: 5px;
+
+      text-transform: uppercase;
+      color: var(--principal-white);
+      background-color: var(--principal-color1);
+      font-weight:600;
+    }
+
+
+
+    /* HERO CLASES */
+
+    .hero {
+      height: 400px;
+      width: 100%;
+      margin-top: 10vh;
+    }
+
+
+    .hero__container {
+      overflow: hidden;
+      height: inherit;
+      width: 100%;
+      max-width: 1000px;
+      margin: 0px auto;
+    }
+
+    .hero__article {
+      height: inherit;
+      width: 50%;
+      float: left;
+      align-content: center;
+
+      text-align: left;
+    }
+
+
+    .hero h1 {
+      font-family: var(--font-merriweather);
+      font-size: var(--size-huge);
+      color: var(--principal-black);
+    }
+
+    .hero p {
+      margin: 20px 0px;
+
+      font-family: var(--font-lato);
+      font-size: var(--size-medium);
+      color: var(--principal-black);
+    }
+
+    .hero__form {
+      overflow: hidden;
+      height: 50px;
+      padding: 10px 0px;
+    }
+
+
+    .hero__input {
+      width: 200px;
+      padding: 0 15px;
+      height: inherit;
+      margin-bottom: 10px;
+
+      border: 1px solid lightgrey;
+      border-radius: 5px;
+      color: lightblue;
+    }
+
+    .hero__button {
+      width: 130px;
+      height: inherit;
+      padding: 10px;
+      margin-left: 10px;
+
+      border-radius: 5px;
+      text-transform: uppercase;
+      color: var(--principal-white);
+      background-color: var(--principal-color1);
+      font-weight:600;
+    }
+
+    .hero__img img {
+      width: 50%;
+      float: right;
+      object-fit: cover;
+
+    }
+
+
+
+
+
+    /* FEATURES CLASES */
+
+    .features{
+      justify-items: center;
+      align-content: center;
+      height: 500px;
+      width: 100%;
+    }
+
+    .features__container {
+      width: 100%;
+      max-width: 1000px;
+      justify-items: center;
+    }
+
+    .features__header {
+      margin-bottom: 40px;
+      width: 62%;
+      text-align: center;
+    }
+
+    .features__header h2 {
+      margin-bottom: 20px;
+      font-family: var(--font-merriweather);
+    }
+
+    .features__feat {
+      overflow: hidden;
+    }
+
+    .features__feat article  {
+      float: left;
+      width: 23%;
+      padding: 0px 10px;
+    }
+
+    .features__feat article h3 {
+      margin: 15px 0px;
+    }
+
+    .features__feat--img {
+      width: 60px;
+      object-fit: cover;
+    }
+
+
+
+
+
+    /* CTA CLASES */
+
+    .cta {
+      width: 100%;
+      min-height: 500px;
+      justify-items: center;
+      align-content: center;
+
+      background-image: url('./src/img/background.png');
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    .cta__container {
+      width: 100%;
+      max-width: 1000px;
+      text-align: center;
+    }
+
+    .cta__title {
+      color: var(--principal-white);
+      font-family:  var(--font-merriweather);
+      font-size: var(--size-extra-large);
+    }
+
+    .cta__content {
+      color: var(--principal-white);
+      font-size: var(--size-large);
+    }
+
+    .cta__button {
+      height: 40px;
+      width: 100px;
+      margin-top: 40px;
+      padding: 10px;
+
+      border-radius: 5px;
+      background-color: var(--principal-white);
+      text-transform: uppercase;
+      color: var(--principal-color1);
+      font-weight:600;
+    }
+
+
+
+
+    /* FOOTER CLASES */
+
+    .footer {
+      height: 300px;
+      width: 100%;
+      align-content: center;
+    }
+
+
+    .footer__container {
+      align-content: center;
+      max-width: 1000px;
+      margin: 0 auto;
+      height: 150px;
+    }
+
+    .footer__navigation {
+      margin: 0 auto 35px auto;
+      justify-items: center;
+    }
+
+    .footer__list {
+      overflow: hidden;
+      width: fit-content;
+    }
+
+    .footer__anchor {
+      float: left;
+      margin: 0 15px;
+    }
+
+    .footer__img {
+      justify-content: center;
+    }
+
+    .footer__right {
+      margin: 0 auto;
+      text-align: center;
+    }
+  </style>
+
+
+</head>
+<body>
+
+  <header class="navigation">
+    <nav class="navigation__container">
+      <ul class="navigation__list">
+        <li class="navigation__list-item"><a href="#"><img src="./src/img/logo.jpg" alt="Logo apres" class="navigation__logo"></a></li>
+        <li class="navigation__list-item"><a href="#">Why Apres?</a></li>
+        <li class="navigation__list-item"><a href="#">What you can do</a></li>
+        <li class="navigation__list-item"><a href="#">Pricing</a></li>
+        <li class="navigation__list-item"><a href="#">Resources</a></li>
+      </ul>
+      <div class="navigation__container-button">
+        <button class="navigation__button">Get started</button>
+      </div>
+    </nav>
+  </header>
+
+
+  <main>
+    <section class="hero">
+      <div class="hero__container">
+        <article class="hero__article">
+          <h1>Automation For Humans</h1>
+          <p>Bult human intelligent automations into your workflow without writing any code</p>
+          <div class="hero__form">
+            <input class="hero__input" type="text" placeholder="Email adress">
+            <button class="hero__button">Get Started</button>
+          </div>
+        </article>
+        <div class="hero__img">
+          <img src="./src//img/hero-blank.72a87926.png" alt="People holding cards">
+        </div>
+      </div>
+    </section>
+
+    <section class="features">
+      <div class="features__container">
+        <div class="features__header">
+          <h2>What you can do with Apres</h2>
+          <p>Apres is where you give your data superpowers, integrated to fit your teams's needs, and built to let anyone unlock the potential of their data.</p>
+        </div>
+        <div class="features__feat">
+          <article>
+            <div>
+              <img class="features__feat--img" src="./src/img/apres-1.png" alt="Computer icon">
+            </div>
+            <h3>Data Enrichment</h3>
+            <p>Enrich your current database with web research, cleaning, deduction, and more.</p>
+          </article>
+          <article>
+            <div>
+              <img class="features__feat--img" src="./src/img/apres-2.png" alt="Face being analyzed icon">
+            </div>
+            <h3>Computer Vision</h3>
+            <p>Use computer vision processing to capture data from your images, PDFs, and more.</p>
+          </article>
+          <article>
+            <div>
+              <img class="features__feat--img" src="./src/img/apres-3.png" alt="Hand writing on a paper icon">
+            </div>
+            <h3>Text Analysis</h3>
+            <p>Define and tag conversations, build dictonaries for bots, summarize articles and more.</p>
+          </article>
+          <article>
+            <div>
+              <img class="features__feat--img" src="./src/img/apres-4.png" alt="Sheet with transcription icon">
+            </div>
+            <h3>Transcription</h3>
+            <p>Get the data you need from rich media files, returned on-demand with 95+% accuracy.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="cta__container">
+        <h2 class="cta__title">Automate yourself</h2>
+        <p class="cta__content">And your business. Two things we can get behind.</p>
+        <button class="cta__button">Sing up</button>
+      </div>
+    </section>
+  </main>
+
+
+  <footer class="footer">
+    <div class="footer__container">
+        <nav class="footer__navigation ">
+          <ul class="footer__list">
+            <li class="footer__anchor">
+              <a href="#">Home</a>
+            </li>
+            <li class="footer__anchor">
+              <a href="#">About Us</a>
+            </li>
+            <li class="footer__anchor">
+              <a href="#">Pricing</a>
+            </li>
+            <li class="footer__anchor">
+              <a href="#">Privacy</a>
+            </li>
+            <li class="footer__anchor">
+              <a href="#">Terms</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="footer__navigation">
+          <ul class="footer__list">
+            <li class="footer__anchor">
+              <a href="#" class="footer__img">
+                <img src="./src/img/facebook.jpg" alt="facebook icon">
+              </a>
+            </li>
+            <li class="footer__anchor">
+              <a href="#" class="footer__img">
+                <img src="./src/img/x.jpg" alt="X icon">
+              </a>
+            </li>
+            <li class="footer__anchor">
+              <a href="#" class="footer__img">
+                <img src="./src/img/mail.jpg" alt="Email icon">
+              </a>
+            </li>
+            <li class="footer__anchor">
+              <a href="#" class="footer__img">
+                <img src="./src/img/gmail.jpg" alt="Gmail icon">
+              </a>
+            </li>
+          </ul>
+        </div>
+        <p class="footer__right">Copyright © 2018 Apres, Inc. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

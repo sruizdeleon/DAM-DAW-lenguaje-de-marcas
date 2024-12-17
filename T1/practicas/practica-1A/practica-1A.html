@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    /* RESET DE ESTILOS */
+
+    * {
+      box-sizing: border-box;
+      text-decoration: none;
+      margin: 0px;
+      padding: 0px;
+    }
+
+    /* ESTILOS DE ETIQUETAS */
+
+    body {
+      width: 100%;
+    }
+
+    header {
+      max-width: 1000px;
+      width: 100%;
+      margin: auto;
+      height: 60px;
+      margin-bottom: 20px;
+      background-color: grey;
+    }
+
+    main {
+      margin: auto;
+      width: 100%;
+      max-width: 1000px;
+    }
+
+    section {
+      background-color: grey;
+      height: 180px;
+      margin-bottom: 20px;
+    }
+
+    footer {
+      max-width: 1000px;
+      width: 100vw;
+      height: 60px;
+      background-color: grey;
+    }
+
+    p {
+      color: white;
+      font-size: x-large;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-weight: bold;
+      padding: 0 10px 0 10px;
+    }
+
+
+
+
+    /* ESTILOS DE CLASE */
+
+    /* Clase para colocar el sidebar a la derecha */
+    .sidebar {
+      overflow: hidden;
+    }
+
+    .sidebar__main {
+      float: left;
+      width: 800px;
+    }
+
+    .sidebar__main--title {
+      height: 60px;
+    }
+
+    .sidebar__main--content {
+      height: 520px;
+    }
+
+    .sidebar__bar {
+      float: right;
+      width: 180px;
+    }
+
+    </style>
+</head>
+
+<body>
+  <!-- HEADER -->
+  <header>
+    <p>A</p>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main>
+    <article>
+      <section>
+        <p>B</p>
+      </section>
+
+      <!-- SIDEBAR CONTAINER -->
+      <div class="sidebar">
+
+        <!-- CONTENT -->
+        <div class="sidebar__main">
+          <section class="sidebar__main--title">
+            <p>C</p>
+          </section>
+          <section class="sidebar__main--content">
+            <p>D</p>
+          </section>
+        </div>
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar__bar">
+          <article>
+            <section>
+              <p>E</p>
+            </section>
+            <section>
+              <p>F</p>
+            </section>
+          </article>
+        </aside>
+      </div>
+    </article>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>G</p>
+  </footer>
+</body>
+</html>

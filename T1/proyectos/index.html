@@ -1,0 +1,1306 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="./src/img/elements/icon-wicked.png" type="image/png" sizes="16x16">
+  <title>Sergio Ruiz de León Almuedo</title>
+
+  <style>
+    /* ESTRUCTURA DE ESTILOS */
+/*
+  - Importaciones
+  - Variables
+  - Reset
+  - Estilos de etiqueta
+  - Estilos de clase:
+    o navigation
+    o hero
+    o description / descripción
+    o team / participantes
+    o cta
+    o gallery
+    o reservations / calendario e inscripción
+    o location / lugar
+    o footer
+*/
+
+
+
+
+
+
+/* IMPORTACIONES */
+
+/* Google Fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Great+Vibes&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900');
+
+
+
+
+
+
+
+
+
+/* VARIABLES */
+:root {
+
+  /* Fuentes */
+  --font-lato: 'Lato';
+  --font-great-vibes: 'Great Vibes';
+
+  /* Colores principales */
+  --c-main-yellow: #F2BF27;
+  --c-main-green: #8fbc8f;
+  --c-main-white: #ffffff;
+  --c-main-black: #000000;
+
+  /* Colores secundarios */
+  --c-sec-dark-background: #010101;
+
+  /* Colores con transparencia */
+  --c-trans-light-green: rgba(66, 123, 54, 0.8);
+  --c-trans-dark-green: rgba(143, 188, 143, 0.2);
+
+}
+
+
+
+
+
+
+
+
+
+/* RESET */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+
+
+
+
+
+
+
+
+/* ESTILOS DE ETIQUETA */
+
+/* Estructura */
+
+html {
+  scroll-behavior: smooth;
+}
+
+header {
+  width: 100%;
+  height: 8vh;
+  position: fixed;
+
+  background-color: var(--c-sec-dark-background);
+}
+
+body {
+  /* Coloca el footer en el bottom en caso de que el contenido sea menor a 100dvh */
+  display: grid;
+  min-height: 100dvh;
+  grid-template-rows: auto 1fr auto;
+  background-color: var(--c-sec-dark-background);
+}
+
+footer {
+  width: 100%;
+  height: 100px;
+
+  background-color: var(--c-sec-dark-background);
+}
+
+
+
+
+/* Fuentes */
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-lato);
+  font-weight: 700;
+  color: var(--c-main-yellow);
+}
+
+p {
+  font-family: var(--font-lato);
+  font-weight: 300;
+  font-size: 1.1rem;
+  color: var(--c-main-white);
+}
+
+a {
+  font-family: var(--font-lato);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: var(--c-sec-dark-background);
+}
+
+h1 {
+  font-family: var(--font-great-vibes);
+  font-size: 5rem;
+}
+
+h2 {
+  font-size: 4.5rem;
+}
+
+h3 {
+  font-size: 3rem;
+}
+
+h4 {
+  font-size: 1.5rem;
+}
+
+h5 {
+  font-size: 1.3rem;
+}
+
+h6 {
+  font-size: 1.1rem;
+}
+
+
+
+
+
+
+
+
+
+
+/* ESTILOS DE CLASE */
+
+/* NAVIGATION */
+.navigation__impostor {
+  width: 100%;
+  height: inherit;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navigation__logo {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.navigation__logo img {
+  height: 80%;
+  width: inherit;
+  object-fit: cover;
+}
+.navigation__logo p {
+  margin-left: 10px;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.navigation__menu {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.navigation__item a {
+  color: var(--c-main-yellow);
+  height: 100%;
+  padding-bottom: 5px;
+  border: solid 0px var(--c-main-yellow);
+  transition: border 0.3s;
+}
+
+.navigation__item a:hover {
+  transition: all 0.5s;
+  border-bottom: solid 10px var(--c-main-yellow);
+  color: var(--c-main-white);
+}
+
+.navigation__item-fixed {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: var(--c-main-yellow);
+  border-radius: 30px;
+}
+
+.navigation__item-fixed--anchor {
+  color: var(--c-sec-dark-background);
+  height: inherit;
+}
+
+.navigation__item-fixed--img {
+  object-fit: cover;
+  height: 90%;
+}
+
+
+
+
+
+
+
+
+
+/* HERO */
+
+.hero {
+  width: 100%;
+  height: 100dvh;
+
+  background-image: url(./src/img/background/hero-wicked.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.hero__impostor {
+  width: 100%;
+  height: inherit;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-content: center;
+
+}
+
+.hero__principal {
+
+  min-width: 300px;
+  margin: 0 10px;
+}
+
+.hero__h1 {
+  color: var(--c-main-yellow);
+  width: max-content;
+
+  margin-bottom: 10px;
+}
+
+.hero__h2 {
+  margin-bottom: 30px;
+  max-width: 350px;
+
+  font-family: var(--font-lato);
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: var(--c-main-white);
+}
+
+.hero__button {
+  padding: 10px 20px;
+
+  border-radius: 20px;
+  border: none;
+  background-color: var(--c-main-yellow);
+}
+
+.hero__button:hover {
+  transition: 0.5s;
+  background-color: var(--c-main-green);
+}
+
+
+
+
+
+
+
+
+
+/* DESCRIPTION */
+
+.description {
+  width: 100%;
+  padding: 10dvh 10px;
+  min-height: 100dvh;
+
+}
+
+.description__impostor {
+  width: 100%;
+  height: inherit;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-content: center;
+
+}
+
+.description__content-columns {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 40px;
+}
+
+.description__content {
+  vertical-align: middle;
+  line-height: 1.3;
+  text-align: justify;
+}
+
+.description__video {
+  width: 100%;
+  aspect-ratio: 16/9;
+}
+
+.description__container-button {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.description__button {
+  padding: 10px 20px;
+
+  border-radius: 20px;
+  border: none;
+  background-color: var(--c-main-yellow);
+}
+
+.description__button:hover {
+  transition: 0.5s;
+  background-color: var(--c-main-green);
+}
+
+
+
+
+
+
+
+
+
+/* TEAM */
+
+.team {
+  width: 100%;
+  padding: 10dvh 10px;
+  min-height: 100dvh;
+}
+
+.team__impostor {
+  width: 100%;
+  height: inherit;
+  max-width: 1200px;
+  margin: 0 auto;
+
+}
+
+.team__container {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.team__item-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 150px;
+
+  border-radius: 20px;
+}
+
+
+.team__img {
+  object-fit: cover;
+  width: 100%;
+  border-radius: 20px;
+}
+
+.team__append {
+  height: 60px;
+  width: 100%;
+  margin-top: -60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+
+}
+
+.team__append span {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-family: var(--font-lato);
+  font-size: 0.9rem;
+  color: var(--c-main-white);
+  border-radius: 20px 20px 0 0;
+  height: calc(100%*0.5);
+  background-color: var(--c-trans-light-green);
+}
+
+.team__append small {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-family: var(--font-lato);
+  font-size: 0.9rem;
+  color: var(--c-main-white);
+  border-radius: 0 0 20px 20px;
+  height: calc(100%*0.5);
+  background-color: var(--c-main-yellow);
+}
+
+
+
+
+
+
+
+
+
+/* CTA */
+
+.cta {
+  width: 100%;
+  height: 100dvh;
+
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(./src/img/background/parallax_wicked.webp);
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+
+.cta__impostor {
+  width: 100%;
+  height: inherit;
+  max-width: 1200px;
+  padding: 0 10px;
+  margin: 0 auto;
+  align-content: center;
+
+}
+
+.cta__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.cta__container h2 {
+  text-align: center;
+  margin-bottom: 100px;
+
+  color: var(--c-main-white);
+}
+
+.cta__button {
+  padding: 10px 20px;
+  margin: 0 auto;
+
+  font-size: 1.4rem;
+  border-radius: 20px;
+  border: none;
+  background-color: var(--c-main-yellow);
+}
+
+.cta__button:hover {
+  transition: 0.5s;
+  background-color: var(--c-main-green);
+}
+
+
+
+
+
+
+
+
+
+/* GALLERY */
+
+.gallery {
+  width: 100%;
+  padding: 10dvh 10px;
+  min-height: 100dvh;
+}
+
+.gallery__impostor {
+  width: 100%;
+  height: inherit;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.gallery__container {
+  margin-top: 20px;
+  display: flex;
+  align-content: center;
+  height: 60dvh;
+}
+
+.gallery__container-img {
+  width: calc(1/14*100%);
+  height: inherit;
+  transition: 1s;
+  border: solid var(--c-trans-dark-green) 1px;
+}
+
+.gallery__container-img:hover {
+  transition: 1s;
+  width: 100%;
+}
+
+.gallery__item {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.position-left:hover {
+  object-position: left;
+}
+
+.position-right:hover {
+  object-position: right;
+}
+
+.position-center:hover {
+  object-position: center;
+}
+
+
+
+
+
+
+
+
+
+/* RESERVATIONS */
+
+.reservations {
+  width: 100%;
+  padding: 10dvh 10px;
+  min-height: 100dvh;
+  background-color: var(--c-main-green);
+
+}
+
+.reservations__impostor {
+  width: 100%;
+  height: inherit;
+  max-width: 1200px;
+  margin: 0 auto;
+
+}
+
+.reservations__header {
+  color: var(--c-main-white);
+}
+
+.reservations__columns {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.reservations__calendar {
+  width: 100%;
+}
+
+.reservartions__calendar-header {
+  font-weight: 600;
+  font-size: 2rem;
+  font-family: var(--font-lato);
+  color: var(--c-main-white);
+  text-align: center;
+}
+
+.reservations__calendar-schedule {
+  margin: 0 auto;
+  border-collapse: separate;
+  border-spacing: 20px;
+}
+
+.reservations__calendar-rows:first-child {
+  font-weight: 700;
+  font-family: var(--font-lato);
+  color: var(--c-main-white);
+  height: 50px;
+  text-align: center;
+  border-radius: 50px;
+  box-shadow:
+    5px 5px 15px rgb(124, 164, 124),
+    -5px -5px 15px rgb(166, 205, 166);
+}
+
+.reservations__calendar-date {
+  font-weight: 500;
+  font-family: var(--font-lato);
+  color: var(--c-main-white);
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  border-radius: 50px;
+  background: rgb(156, 198, 156);
+  box-shadow:
+    5px 5px 15px rgb(124, 164, 124),
+    -5px -5px 15px rgb(166, 205, 166);
+}
+
+.reservations__calendar-date--selected {
+  background: var(--c-main-yellow);
+  font-weight: 700;
+  color: var(--c-main-white);
+}
+
+.reservations__calendar-date--out {
+  background: rgb(156, 198, 156);
+  font-weight: 100;
+  color: #eee;
+}
+
+.reservations__form {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+}
+
+.reservations__form-header {
+  font-size: 2rem;
+  color: var(--c-main-white);
+}
+
+.reservations__form-description {
+  font-weight: 300;
+}
+
+.reservations__form-fieldset {
+  display: grid;
+  flex-direction: column;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 20px;
+  border: none;
+}
+
+.reservations__form-column {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.reservations__form-label {
+  padding: 10px 15px;
+
+  font-family: var(--font-lato);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--c-main-white);
+}
+
+.reservations__form-input {
+  font-family: var(--font-lato);
+  font-size: 1rem;
+  font-weight: 300;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 30px;
+  background: rgb(156, 198, 156);
+  box-shadow:
+    5px 5px 15px rgb(124, 164, 124),
+    -5px -5px 15px rgb(166, 205, 166);
+}
+
+.reservations__form-select {
+  font-family: var(--font-lato);
+  font-size: 1rem;
+  font-weight: 300;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 30px;
+  background: rgb(156, 198, 156);
+  box-shadow:
+  5px 5px 15px rgb(124, 164, 124),
+  -5px -5px 15px rgb(166, 205, 166);
+}
+
+.reservations__form-button {
+  font-family: var(--font-lato);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--c-main-white);
+  margin-top: 30px;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 30px;
+  background-color: var(--c-main-yellow);
+}
+
+
+
+
+
+
+
+
+
+/* LOCATION */
+
+.location {
+  width: 100%;
+  padding: 10dvh 10px;
+  min-height: 100dvh;
+}
+
+.location__impostor {
+  width: 100%;
+  height: inherit;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.location__header {
+  color: var(--c-main-white);
+}
+
+.location__iframe {
+  margin-top: 20px;
+  border-radius: 20px;
+  height: 60dvh;
+  width: 100%;
+  border: none;
+}
+
+
+
+
+
+
+
+
+
+/* FOOTER */
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer__rights {
+  text-align: center;
+}
+
+  </style>
+
+</head>
+<body>
+
+  <!-- Header / Encabezado -->
+  <header>
+    <nav class="navigation__impostor">
+      <a href="#" class="navigation__logo">
+        <img src="./src/img/brand/logo-acorde-al-guion.png" alt="Logo Acorde al Guión">
+        <p>Acorde al Guión</p>
+      </a>
+
+      <!-- Navigation / Navegación -->
+      <ul class="navigation__menu">
+        <li class="navigation__item"><a href="#description">Sinópsis</a></li>
+        <li class="navigation__item"><a href="#team">Reparto</a></li>
+        <li class="navigation__item"><a href="#gallery">The Show</a></li>
+        <li class="navigation__item"><a href="#reservations">Reservas</a></li>
+        <li class="navigation__item"><a href="#location">Localización</a></li>
+        <li class="navigation__item-fixed">
+          <a class="navigation__item-fixed--anchor" href="#">
+            <img class="navigation__item-fixed--img" src="./src/img/elements/arrow.png" alt="Flecha para subir">
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Contenido principal -->
+  <article>
+    <!-- Hero / Encabezado -->
+    <section id="hero" class="hero">
+      <div class="hero__impostor">
+        <div class="hero__principal">
+          <h1 class="hero__h1">The Wicked</h1>
+          <h2 class="hero__h2">La historia jamás contada de la bruja del Mago de Oz</h2>
+          <a class="hero__button" href="#reservations">Reserva tu entrada</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Descripcion / Descripción -->
+    <section id="description" class="description">
+      <div class="description__impostor">
+        <h3>Sinopsis</h3>
+        <div class="description__content-columns">
+          <div class="description__content">
+            <p>Desde que Acorde al Guión despegó hemos sabido encarar los retos que nosotros mismos nos hemos propuesto, y de los que ustedes habéis podido disfrutar. Aunque nos vamos haciendo mayores, la ilusión sigue creciendo, al igual que nuestras aptitudes y nuestra confianza. Por eso, el grupo ha decidido dar un salto adelante, aumentar el nivel de dificultad, y preparar para septiembre de 2015 uno de los musicales con mayor complicación vocal y escénica. Tenemos el orgullo de presentar “WICKED, la historia jamás contada de las brujas de Oz”.
+            </p>
+            <p>
+            Más de una década lleva levantándose el telón en Broadway para dar a conocer al mundo uno de los espectáculos con más seguidores en los países anglosajones. Las calles de Nueva York pronto se fueron inundando del verde de la Ciudad Esmeralda, a la que seguro usted ya ha viajado junto a Dorothy. No obstante, esta vez serán otras sus acompañantes, Elphaba y Glinda, dos brujas que demuestran que las apariencias engañan y a pesar de sus diferencias se unen bajo una amistad que conforma la trama principal del musical.</p>
+            <p>Además, podrá comprender la historia que usted ya sabe, el famoso viaje que comparten Dorothy, el hombre de hojalata, el espantapájaros y el león miedoso, pues en Wicked (Malvada) se da a conocer el origen de estos personajes. Con lo cual, lo que se observará desde su asiento ocurre antes de la llegada de Dorothy a Oz, aunque el mago ya se encuentra allí esperándola acompañado de otros personajes fantásticos.</p>
+          </div>
+          <div class="description__content">
+            <p>
+              Ya no podemos chivar más, será usted quien tenga que tener paciencia para juzgar quien es más malvado en Oz, pero ande con cuidado, que en este mundo nada es lo que parece.
+              Para los mas curiosos y para los que no conozcáis el musical os recomendamos ver:
+            </p>
+            <iframe class="description__video" src="https://www.youtube-nocookie.com/embed/Svt0UytcAgc?si=t4L3oov9QJpBjyZk" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <div class="description__container-button">
+              <a class="description__button" href="https://wickedthemusical.com/">Musical Broadway</a>
+              <a class="description__button" href="https://www.wickedthemusical.co.uk/">Musical Londres</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Team / Participantes -->
+    <section id="team" class="team">
+      <div class="team__impostor">
+        <h2>Reparto</h2>
+
+        <div class="team__container">
+          <div class="team__item-container">
+            <img src="./src/img/team/claudia-w.jpg" alt="Actriz Claudia" class="team__img">
+            <div class="team__append">
+              <span>Elphaba</span>
+              <small>Claudia Cerviño</small>
+            </div>
+          </div>
+          <div class="team__item-container">
+            <img src="./src/img/team/teresa-w.jpg" alt="Actriz Claudia" class="team__img">
+            <div class="team__append">
+              <span>Elphaba</span>
+              <small>Teresa Ponce</small>
+            </div>
+          </div>
+          <div class="team__item-container">
+            <img src="./src/img/team/clara-w.jpg" alt="Actriz Claudia" class="team__img">
+            <div class="team__append">
+              <span>Glinda</span>
+              <small>Clara Septién</small>
+            </div>
+          </div>
+          <div class="team__item-container">
+            <img src="./src/img/team/marta-w.jpg" alt="Actriz Claudia" class="team__img">
+            <div class="team__append">
+              <span>Nessarose</span>
+              <small>Marta Jiménez</small>
+            </div>
+          </div>
+          <div class="team__item-container">
+            <img src="./src/img/team/fer-w.jpg" alt="Actriz Claudia" class="team__img">
+            <div class="team__append">
+              <span>Fiyero</span>
+              <small>Fernando Gento</small>
+            </div>
+          </div>
+          <div class="team__item-container">
+            <img src="./src/img/team/pascu-w.jpg" alt="Actriz Claudia" class="team__img">
+            <div class="team__append">
+              <span>Boq</span>
+              <small>Álvaro Pascual</small>
+            </div>
+          </div>
+          <div class="team__item-container">
+            <img src="./src/img/team/rodera-w.jpg" alt="Actriz Claudia" class="team__img">
+            <div class="team__append">
+              <span>Mago de Oz</span>
+              <small>Javier Rodera</small>
+            </div>
+          </div>
+          <div class="team__item-container">
+            <img src="./src/img/team/michelle-w.jpg" alt="Actriz Claudia" class="team__img">
+            <div class="team__append">
+              <span>Mme. Morrible</span>
+              <small>Michelle Passadardi</small>
+            </div>
+          </div>
+          <div class="team__item-container">
+            <img src="./src/img/team/raul-w.jpg" alt="Actriz Claudia" class="team__img">
+            <div class="team__append">
+              <span>Dr. Dillamond</span>
+              <small>Raúl Méndez</small>
+            </div>
+          </div>
+          <div class="team__item-container">
+            <img src="./src/img/team/angel-w.jpg" alt="Actriz Claudia" class="team__img">
+            <div class="team__append">
+              <span>Chistery</span>
+              <small>Ángel Fernández</small>
+            </div>
+          </div>
+          <div class="team__item-container">
+            <img src="./src/img/team/julio-w.jpg" alt="Actriz Claudia" class="team__img">
+            <div class="team__append">
+              <span>Profesor/Chistery</span>
+              <small>Julio Armesto</small>
+            </div>
+          </div>
+          <div class="team__item-container">
+            <img src="./src/img/team/ana-w.jpg" alt="Actriz Claudia" class="team__img">
+            <div class="team__append">
+              <span>Cover Mme. Morrible</span>
+              <small>Ana Sánchez</small>
+            </div>
+          </div>
+          <div class="team__item-container">
+            <img src="./src/img/team/carmen-w.jpg" alt="Actriz Claudia" class="team__img">
+            <div class="team__append">
+              <span>Shen Shen</span>
+              <small>Carmen Díaz</small>
+            </div>
+          </div>
+          <div class="team__item-container">
+            <img src="./src/img/team/elena-w.jpg" alt="Actriz Claudia" class="team__img">
+            <div class="team__append">
+              <span>Pfanee</span>
+              <small>Elena Ballesteros</small>
+            </div>
+          </div>
+          <div class="team__item-container">
+            <img src="./src/img/team/edurne-w.jpg" alt="Actriz Claudia" class="team__img">
+            <div class="team__append">
+              <span>Cover de Glinda</span>
+              <small>Edurne Castro</small>
+            </div>
+          </div>
+          <div class="team__item-container">
+            <img src="./src/img/team/julia-w.jpg" alt="Actriz Claudia" class="team__img">
+            <div class="team__append">
+              <small>Julia Méndez</small>
+            </div>
+          </div>
+          <div class="team__item-container">
+            <img src="./src/img/team/laura-w.jpg" alt="Actriz Claudia" class="team__img">
+            <div class="team__append">
+              <small>Laura Guardiola</small>
+            </div>
+          </div>
+          <div class="team__item-container">
+            <img src="./src/img/team/loreto-w.jpg" alt="Actriz Claudia" class="team__img">
+            <div class="team__append">
+              <small>Loreto González</small>
+            </div>
+          </div>
+          <div class="team__item-container">
+            <img src="./src/img/team/maria-w.jpg" alt="Actriz Claudia" class="team__img">
+            <div class="team__append">
+              <span>Shen Shen/Nessarose</span>
+              <small>María Albendea</small>
+            </div>
+          </div>
+          <div class="team__item-container">
+            <img src="./src/img/team/mel-w.jpg" alt="Actriz Claudia" class="team__img">
+            <div class="team__append">
+              <small>Melanie Ribeiro</small>
+            </div>
+          </div>
+          <div class="team__item-container">
+            <img src="./src/img/team/monica-w.jpg" alt="Actriz Claudia" class="team__img">
+            <div class="team__append">
+              <small>Mónica Delgado</small>
+            </div>
+          </div>
+          <div class="team__item-container">
+            <img src="./src/img/team/pilar-w.jpg" alt="Actriz Claudia" class="team__img">
+            <div class="team__append">
+              <span>Melena</span>
+              <small>Pilar González</small>
+            </div>
+          </div>
+          <div class="team__item-container">
+            <img src="./src/img/team/rocio-w.jpg" alt="Actriz Claudia" class="team__img">
+            <div class="team__append">
+              <small>Rocío Cabrera</small>
+            </div>
+          </div>
+          <div class="team__item-container">
+            <img src="./src/img/team/vanesa-w.jpg" alt="Actriz Claudia" class="team__img">
+            <div class="team__append">
+              <small>Vanesa García</small>
+            </div>
+          </div>
+          <div class="team__item-container">
+            <img src="./src/img/team/alex-w.jpg" alt="Actriz Claudia" class="team__img">
+            <div class="team__append">
+              <span>Boq</span>
+              <small>Alejandro Licera</small>
+            </div>
+          </div>
+          <div class="team__item-container">
+            <img src="./src/img/team/armando-w.jpg" alt="Actriz Claudia" class="team__img">
+            <div class="team__append">
+              <small>Armando González</small>
+            </div>
+          </div>
+          <div class="team__item-container">
+            <img src="./src/img/team/jose-w.jpg" alt="Actriz Claudia" class="team__img">
+            <div class="team__append">
+              <span>Frex</span>
+              <small>José G. Menéndez</small>
+            </div>
+          </div>
+          <div class="team__item-container">
+            <img src="./src/img/team/guille-w.jpg" alt="Actriz Claudia" class="team__img">
+            <div class="team__append">
+              <span>Cover Dr. Dillamond</span>
+              <small>Guillermo Núñez</small>
+            </div>
+          </div>
+          <div class="team__item-container">
+            <img src="./src/img/team/manuel-w.jpg" alt="Actriz Claudia" class="team__img">
+            <div class="team__append">
+              <small>Manuel Llorens</small>
+            </div>
+          </div>
+          <div class="team__item-container">
+            <img src="./src/img/team/calzada-w.jpg" alt="Actriz Claudia" class="team__img">
+            <div class="team__append">
+              <small>Miguel Calzada</small>
+            </div>
+          </div>
+          <div class="team__item-container">
+            <img src="./src/img/team/carbajo-w.jpg" alt="Actriz Claudia" class="team__img">
+            <div class="team__append">
+              <small>Miguel Carbajo</small>
+            </div>
+          </div>
+          <div class="team__item-container">
+            <img src="./src/img/team/pablo-w.jpg" alt="Actriz Claudia" class="team__img">
+            <div class="team__append">
+              <span>Cover de Mago de Oz</span>
+              <small>Pablo Torel</small>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- Call to Action / Llamada a la acción -->
+    <section id="cta" class="cta">
+      <div class="cta__impostor">
+        <div class="cta__container">
+          <h2>¿Te vas a perder este viaje al mundo de las maravillas?</h2>
+          <a class="cta__button" href="#reservations">Reserva tu entrada</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery / Galería de fotos -->
+    <section id="gallery" class="gallery">
+      <div class="gallery__impostor">
+        <h2>The Show</h2>
+        <div class="gallery__container">
+          <div class="gallery__container-img">
+            <img class="gallery__item position-right" src="./src/img/gallery/actuation-1.jpg" alt="Elphaba mirando un papel">
+          </div>
+          <div class="gallery__container-img">
+            <img class="gallery__item position-left" src="./src/img/gallery/actuation-2.jpg" alt="Hombre de hojalata">
+          </div>
+          <div class="gallery__container-img">
+            <img class="gallery__item position-right" src="./src/img/gallery/actuation-3.jpg" alt="Hombre apresado">
+          </div>
+          <div class="gallery__container-img">
+            <img class="gallery__item position-left" src="./src/img/gallery/actuation-4.jpg" alt="Glinda vestido azul">
+          </div>
+          <div class="gallery__container-img">
+            <img class="gallery__item position-left" src="./src/img/gallery/actuation-5.jpg" alt="Glinda asustada máscara">
+          </div>
+          <div class="gallery__container-img">
+            <img class="gallery__item position-right" src="./src/img/gallery/actuation-6.jpg" alt="Mago de Oz">
+          </div>
+          <div class="gallery__container-img">
+            <img class="gallery__item position-right" src="./src/img/gallery/actuation-7.jpg" alt="Mujer silla de ruedas Elphaba">
+          </div>
+          <div class="gallery__container-img">
+            <img class="gallery__item position-right" src="./src/img/gallery/actuation-8.jpg" alt="Cantantes">
+          </div>
+          <div class="gallery__container-img">
+            <img class="gallery__item position-right" src="./src/img/gallery/actuation-9.jpg" alt="Elphaba volando">
+          </div>
+          <div class="gallery__container-img">
+            <img class="gallery__item position-right" src="./src/img/gallery/actuation-10.jpg" alt="Mago cantando">
+          </div>
+          <div class="gallery__container-img">
+            <img class="gallery__item position-right" src="./src/img/gallery/actuation-11.jpg" alt="Elfos posando">
+          </div>
+          <div class="gallery__container-img">
+            <img class="gallery__item position-right" src="./src/img/gallery/actuation-12.jpg" alt="Elphaba y Glinda se encuentran">
+          </div>
+          <div class="gallery__container-img">
+            <img class="gallery__item position-right" src="./src/img/gallery/actuation-13.jpg" alt="Elphaba levantando la mano">
+          </div>
+          <div class="gallery__container-img">
+            <img class="gallery__item position-right" src="./src/img/gallery/actuation-14.jpg" alt="Elphaba cantando">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Reservations / Calendario e inscripciones -->
+    <section id="reservations" class="reservations">
+      <div class="reservations__impostor">
+        <h2 class="reservations__header">Reservas</h2>
+        <div class="reservations__columns">
+          <div class="reservations__calendar">
+            <div class="reservartions__calendar-header">Octubre 24</div>
+            <table class="reservations__calendar-schedule">
+              <tr class="reservations__calendar-rows">
+                <th class="reservations__calendar-heading">L</th>
+                <th class="reservations__calendar-heading">M</th>
+                <th class="reservations__calendar-heading">X</th>
+                <th class="reservations__calendar-heading">J</th>
+                <th class="reservations__calendar-heading">V</th>
+                <th class="reservations__calendar-heading">S</th>
+                <th class="reservations__calendar-heading">D</th>
+              </tr>
+              <tr class="reservations__calendar-rows">
+                <td class="reservations__calendar-date reservations__calendar-date--out">30</td>
+                <td class="reservations__calendar-date">1</td>
+                <td class="reservations__calendar-date">2</td>
+                <td class="reservations__calendar-date">3</td>
+                <td class="reservations__calendar-date reservations__calendar-date--selected">4</td>
+                <td class="reservations__calendar-date reservations__calendar-date--selected">5</td>
+                <td class="reservations__calendar-date reservations__calendar-date--selected">6</th>
+              </tr>
+              <tr class="reservations__calendar-rows">
+                <td class="reservations__calendar-date">7</td>
+                <td class="reservations__calendar-date">8</td>
+                <td class="reservations__calendar-date">9</td>
+                <td class="reservations__calendar-date">10</td>
+                <td class="reservations__calendar-date reservations__calendar-date--selected">11</td>
+                <td class="reservations__calendar-date reservations__calendar-date--selected">12</td>
+                <td class="reservations__calendar-date reservations__calendar-date--selected">13</td>
+              </tr>
+              <tr class="reservations__calendar-rows">
+                <td class="reservations__calendar-date">14</td>
+                <td class="reservations__calendar-date">15</td>
+                <td class="reservations__calendar-date">16</td>
+                <td class="reservations__calendar-date">17</td>
+                <td class="reservations__calendar-date reservations__calendar-date--selected">18</td>
+                <td class="reservations__calendar-date reservations__calendar-date--selected">19</td>
+                <td class="reservations__calendar-date reservations__calendar-date--selected">20</td>
+              </tr>
+              <tr class="reservations__calendar-rows">
+                <td class="reservations__calendar-date">21</td>
+                <td class="reservations__calendar-date">22</td>
+                <td class="reservations__calendar-date">23</td>
+                <td class="reservations__calendar-date">24</td>
+                <td class="reservations__calendar-date reservations__calendar-date--selected">25</td>
+                <td class="reservations__calendar-date reservations__calendar-date--selected">26</td>
+                <td class="reservations__calendar-date reservations__calendar-date--selected">27</td>
+              </tr>
+              <tr class="reservations__calendar-rows">
+                <td class="reservations__calendar-date">28</td>
+                <td class="reservations__calendar-date">29</td>
+                <td class="reservations__calendar-date">30</td>
+                <td class="reservations__calendar-date">31</td>
+                <td class="reservations__calendar-date reservations__calendar-date--out">1</td>
+                <td class="reservations__calendar-date reservations__calendar-date--out">2</td>
+                <td class="reservations__calendar-date reservations__calendar-date--out">3</td>
+              </tr>
+            </table>
+          </div>
+          <form class="reservations__form">
+            <h3 class="reservations__form-header">Formulario de reserva de entradas</h3>
+            <p class="reservations__form-description">Reserva tu entrada y hazte con ella el día del evento. Todas las funciones se desarrollan de 19:00 a 22:00.</p>
+            <fieldset class="reservations__form-fieldset">
+              <div class="reservations__form-column">
+                <label class="reservations__form-label" for="email">Email</label>
+                <input class="reservations__form-input" type="email" name="email">
+              </div>
+              <div class="reservations__form-column">
+                <label class="reservations__form-label" for="email2">Repite tu email</label>
+                <input class="reservations__form-input" type="email" name="email2">
+              </div>
+            </fieldset>
+            <fieldset class="reservations__form-fieldset">
+              <div class="reservations__form-column">
+                <label class="reservations__form-label" for="name">Nombre</label>
+                <input class="reservations__form-input" type="text" name="name">
+              </div>
+              <div class="reservations__form-column">
+                <label class="reservations__form-label" for="surname">Apellidos</label>
+                <input class="reservations__form-input" type="text" name="surname">
+              </div>
+            </fieldset>
+            <fieldset class="reservations__form-fieldset">
+              <div class="reservations__form-column">
+                <label class="reservations__form-label" for="show-day">Selecciona la función</label>
+                <select class="reservations__form-select" name="show-day">
+                  <option value=""></option>
+                  <option value="04-10-24">4 de octubre</option>
+                  <option value="05-10-24">5 de octubre</option>
+                  <option value="06-10-24">6 de octubre</option>
+                  <option value="11-10-24">11 de octubre</option>
+                  <option value="12-10-24">12 de octubre</option>
+                  <option value="13-10-24">13 de octubre</option>
+                  <option value="18-10-24">18 de octubre</option>
+                  <option value="19-10-24">19 de octubre</option>
+                  <option value="20-10-24">20 de octubre</option>
+                  <option value="25-10-24">25 de octubre</option>
+                  <option value="26-10-24">26 de octubre</option>
+                  <option value="27-10-24">27 de octubre</option>
+                </select>
+              </div>
+              <div class="reservations__form-column">
+                <label class="reservations__form-label" for="amount-tickets">Selecciona el número de entradas</label>
+                <input class="reservations__form-input" type="number" name="amount-tickets">
+              </div>
+            </fieldset>
+            <button class="reservations__form-button">Reservar</button>
+          </form>
+        </div>
+    </section>
+
+    <!-- Location / Lugar -->
+    <section class="location" id="location">
+        <div class="location__impostor">
+          <h2 class="location__header">Localización</h2>
+          <iframe class="location__iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d759.1690239438678!2d-3.6547386434805023!3d40.43817061342709!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd422f370589727f%3A0x4b58ece0dbf0790d!2sColegio%20Montpellier!5e0!3m2!1ses!2ses!4v1734373069151!5m2!1ses!2ses" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </section>
+
+  </article>
+
+
+  <!-- Footer / Pie de página -->
+  <footer class="footer">
+    <p class="footer__rights">CopyRight© | Acorde al guión</p>
+  </footer>
+</body>
+</html>
