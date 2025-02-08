@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <title>Suscripción a Casa Viva</title>
+</head>
+<body>
+
+  <!-- Encabezado -->
+  <header>
+    <div class="logo">
+      <img class="logo__img" src="./src/img/logo.png" alt="Logo Casa Viva">
+    </div>
+
+    <!-- Menú de navegación -->
+    <nav class="navigation flex-c-c">
+      <ul class="navigation__list flex-c-c">
+        <li class="navigation__item"><a href="#">Home</a></li>
+        <li class="navigation__item"><a href="#">Casas</a></li>
+        <li class="navigation__item"><a href="#">Living</a></li>
+        <li class="navigation__item"><a href="#">Soluciones</a></li>
+        <li class="navigation__item"><a href="#">Contacto</a></li>
+        <li class="navigation__item"><a href="#">Suscripciones y tienda online</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Contenido principal -->
+  <article>
+
+    <!-- Formulario -->
+    <form class="form" action="http://www.cursos-diseno.es/mostrar.php" method="post">
+      <div class="flex-c-c">
+        <div class="form__section flex-c-r">
+          <table class="form__table">
+
+            <!-- Datos de suscripción -->
+            <tr>
+              <td>
+                <h1 class="form__title">Datos de suscripción</h1>
+              </td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>* Campos obligatorios</td>
+            </tr>
+            <tr>
+              <td class="form__data-label">Nombre *</td>
+              <td class="form__data-item">
+                <input autofocus class="form__input form__input-big" type="text" name="nombre" maxlength="40" required>
+              </td>
+            </tr>
+            <tr>
+              <td class="form__data-label">Apellidos *</td>
+              <td class="form__data-item">
+                <input class="form__input form__input-big" type="text" name="apellidos"  maxlength="40" required>
+              </td>
+            </tr>
+            <tr>
+              <td class="form__data-label">Dirección *</td>
+              <td class="form__data-item">
+                <input class="form__input form__input-big" type="text" name="direccion" maxlength="70" placeholder="Calle, nº, piso..." required>
+              </td>
+            </tr>
+            <tr>
+              <td class="form__data-label">Código postal *</td>
+              <td class="form__data-item">
+                <input class="form__input form__input-small" type="number" name="cp" min="1000" max="99999" required>
+              </td>
+            </tr>
+            <tr>
+              <td class="form__data-label">Ciudad *</td>
+              <td class="form__data-item">
+                <input class="form__input form__input-small" type="text" name="ciudad" maxlength="50" required>
+              </td>
+            </tr>
+            <tr>
+              <td class="form__data-label">Provincia *</td>
+              <td class="form__data-item">
+                <select required class="form__input form__input-small" name="provincia" id="provincia">
+                  <option value="alava">Álava</option>
+                  <option value="albacete">Albacete</option>
+                  <option value="alicante">Alicante</option>
+                  <option value="almeria">Almería</option>
+                  <option value="asturias">Asturias</option>
+                  <option value="avila">Ávila</option>
+                  <option value="badajoz">Badajoz</option>
+                  <option value="barcelona">Barcelona</option>
+                  <option value="burgos">Burgos</option>
+                  <option value="caceres">Cáceres</option>
+                  <option value="cadiz">Cádiz</option>
+                  <option value="cantabria">Cantabria</option>
+                  <option value="castellon">Castellón</option>
+                  <option value="ceuta">Ceuta</option>
+                  <option value="ciudad-real">Ciudad Real</option>
+                  <option value="cordoba">Córdoba</option>
+                  <option value="cuenca">Cuenca</option>
+                  <option value="gerona">Gerona</option>
+                  <option value="granada">Granada</option>
+                  <option value="guadalajara">Guadalajara</option>
+                  <option value="guipuzcoa">Guipúzcoa</option>
+                  <option value="huelva">Huelva</option>
+                  <option value="huesca">Huesca</option>
+                  <option value="islas-baleares">Islas Baleares</option>
+                  <option value="jaen">Jaén</option>
+                  <option value="la-coruna">La Coruña</option>
+                  <option value="la-rioja">La Rioja</option>
+                  <option value="las-palmas">Las Palmas</option>
+                  <option value="leon">León</option>
+                  <option value="lerida">Lérida</option>
+                  <option value="lugo">Lugo</option>
+                  <option value="madrid" selected>Madrid</option>
+                  <option value="malaga">Málaga</option>
+                  <option value="melilla">Melilla</option>
+                  <option value="murcia">Murcia</option>
+                  <option value="navarra">Navarra</option>
+                  <option value="orense">Orense</option>
+                  <option value="palencia">Palencia</option>
+                  <option value="pontevedra">Pontevedra</option>
+                  <option value="salamanca">Salamanca</option>
+                  <option value="segovia">Segovia</option>
+                  <option value="sevilla">Sevilla</option>
+                  <option value="soria">Soria</option>
+                  <option value="tarragona">Tarragona</option>
+                  <option value="tenerife">Tenerife</option>
+                  <option value="teruel">Teruel</option>
+                  <option value="toledo">Toledo</option>
+                  <option value="valencia">Valencia</option>
+                  <option value="valladolid">Valladolid</option>
+                  <option value="vizcaya">Vizcaya</option>
+                  <option value="zamora">Zamora</option>
+                  <option value="zaragoza">Zaragoza</option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <td class="form__data-label">Teléfono *</td>
+              <td class="form__data-item">
+                <input class="form__input form__input-big" type="text" name="telefono" minlength="9" maxlength="12" placeholder="+34 123 455 789" required>
+              </td>
+            </tr>
+
+            <!-- Datos de usuario -->
+            <tr>
+              <td>
+                <h2 class="form__title">Datos de usuario</h2>
+                </td>
+            </tr>
+            <tr>
+              <td class="form__data-label">Dirección de correo electrónico *</td>
+              <td class="form__data-item">
+                <input class="form__input form__input-big" type="email" name="email" minlength="4" maxlength="50" required autocomplete="off">
+              </td>
+            </tr>
+            <tr>
+              <td class="form__data-label">Contraseña *</td>
+              <td class="form__data-item">
+                <input class="form__input form__input-small" type="password" name="password" minlength="8" maxlength="30" required>
+              </td>
+            </tr>
+            <tr>
+              <td class="form__data-label">Confirmación de la contraseña *</td>
+              <td class="form__data-item">
+                <input class="form__input form__input-small" type="password" name="pasword2" minlength="8" maxlength="30" required>
+              </td>
+            </tr>
+            <tr>
+              <td></td>
+              <td class="form__data-item">
+                <input name="condiciones" type="checkbox" value="SI" required>
+                <label for="condiciones">Acepto las <a class="form__anchor" href="#">condiciones</a> *</label>
+              </td>
+            </tr>
+          </table>
+        </div>
+
+        <!-- Portada revista -->
+        <div class="form__img-container">
+          <img class="form__img" src="./src/img/revista.jpg" alt="Portada de la resvista Casa Viva">
+        </div>
+      </div>
+
+      <!-- Campo oculto y submit -->
+      <input type="hidden" name="destinatario" value="sergio-ruiz@bootcamp-upgrade.com"></td>
+      <input class="form__button" type="submit" value="Suscribirme">
+    </form>
+  </article>
+
+  <!-- Pie de página -->
+  <footer class="flex-s-c">
+    <nav class="footer-navigation">
+      <ul class="footer-navigation__list">
+        <li class="footer-navigation__item"><a href="#">Contacto</a></li>
+        <li class="footer-navigation__item"><a href="#">Condiciones generales</a></li>
+        <li class="footer-navigation__item"><a href="#">Condiciones y gastos de envío</a></li>
+        <li class="footer-navigation__item"><a href="#">Política de privacidad</a></li>
+        <li class="footer-navigation__item"><a href="#">Información de contacto</a></li>
+      </ul>
+    </nav>
+  </footer>
+</body>
+</html>

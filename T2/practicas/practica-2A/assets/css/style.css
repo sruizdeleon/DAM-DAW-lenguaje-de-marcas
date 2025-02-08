@@ -1,0 +1,225 @@
+/* RESET */
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+}
+
+
+
+
+
+/* ETIQUETAS */
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 1rem;
+}
+
+header {
+  width: 100%;
+}
+
+
+
+
+
+
+/* Utils */
+
+.flex-s-c {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.flex-c-c {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-c-l {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+}
+
+.flex-c-r {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+}
+
+
+
+
+
+
+/* HEADER */
+
+/* Logo */
+
+.logo {
+  margin: 0 auto;
+  width: 250px;
+}
+
+.logo__img {
+  object-fit: cover;
+  width: inherit;
+}
+
+
+
+
+
+
+/* Navigation */
+
+.navigation {
+  height: 60px;
+  max-width: 1200px;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  margin: 0 auto;
+}
+
+.navigation__list {
+  width: 100%;
+  list-style: none;
+  gap: 25px;
+}
+
+.navigation__item a{
+  text-transform: uppercase;
+  color: #222222;
+  font-weight: 600;
+  font-size: 0.8rem;
+}
+
+
+
+
+
+
+/* BODY */
+
+article {
+  margin: 50px;
+}
+
+
+/* form */
+.form {
+  display: flex;
+  flex-direction: column;
+  width: max-content;
+  max-width: 1000px;
+  margin: 0 auto;
+  color: #777;
+}
+
+
+/* contenedores */
+.form__section {
+  width: 100%;
+}
+
+.form__table {
+  max-width: max-content;
+  margin-right: 30px;
+  border-spacing: 15px 5px;
+}
+
+
+/* tabla */
+.form__title {
+  color:#164594;
+  font-weight: 600;
+  font-size: 1.2rem;
+  padding-bottom: 10px;
+}
+
+.form__data-label {
+  text-align: right;
+}
+
+input, textarea {
+  border: 1px solid #bbb;
+}
+
+.form__input {
+  padding: 3px 8px;
+  border: 1px solid #bbb;
+  font: 1rem 'Segoe', sans-serif;
+  color: black;
+}
+
+.form__input-big {
+  width: 250px;
+}
+
+.form__input-small {
+  width: 180px;
+}
+
+.form__anchor {
+  color: #777;
+  text-decoration: underline;
+}
+
+.form__button {
+  background: #164594;
+  padding: 5px 10px;
+  border: none;
+  color: white;
+  font-weight: 600;
+  margin: 30px auto;
+  cursor: pointer;
+  box-shadow: 0 1px 3px #888
+}
+
+.form__button:hover {
+  background: #2575ff;
+  transition: 0.5s;
+  box-shadow: 0 4px 4px #888;
+}
+
+
+/* revista */
+.form__img-container {
+  width: 300px;
+  max-height: max-content;
+}
+
+.form__img {
+  width: inherit;
+  object-fit: cover;
+}
+
+
+
+
+
+
+/* FOOTER */
+
+footer {
+  background-color: #164594;
+  height: 100px;
+  padding-top: 25px;
+}
+
+.footer-navigation__list {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+}
+
+.footer-navigation__item a {
+  color: white;
+  font-size: 0.8rem;
+}
