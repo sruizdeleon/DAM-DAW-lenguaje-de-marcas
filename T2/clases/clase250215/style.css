@@ -1,0 +1,42 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  background-color: black;
+  padding: 20px 0px;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  list-style: none;
+  color: white;
+}
+
+.nav:active {
+  color: white;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.grid div {
+  margin: 10px;
+  background-color: cadetblue;
+  text-align: center;
+}
+
+.footer {
+  position: absolute;  bottom: 0px;
+  background-color: black;
+  width: 100%;
+  color: white;
+  text-align: center;
+  padding: 20px 0px;
+}
