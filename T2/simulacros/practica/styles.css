@@ -1,0 +1,69 @@
+/* Reset */
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+
+/* Estilos de body */
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: rgb(210, 246, 255);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Contenedor de formulario */
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 600px;
+  padding: 40px;
+  border-radius: 30px;
+  background-color: rgba(255, 255, 255, 0.7);
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos de los inputs */
+input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+/* Estolos de los botones */
+button {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#calculadoraBtn {
+  background-color: #28a745;
+  color: white;
+}
+
+/* Hover en botones */
+button:hover {
+  opacity: 0.8;
+}
+
+/* Diseño responsivo */
+@media (max-with: 600px) {
+  .container {
+    width: 90%;
+  }
+}
