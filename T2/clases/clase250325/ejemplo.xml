@@ -1,0 +1,12 @@
+<?xml version="1.0" enconding="UTF-8"?>
+<libreria>
+  <libro año="2025">
+    <titulo>El Quijote</titulo>
+    <autor>Miguel Cervantes</autor>
+  </libro>
+</libreria>
+
+<!--
+Es autodescriptivo y estructurado, las etiquetas son seudocodigo
+se puede añadir etiquetas o atributos, los atributos están destinados sobre todo a IDs o información que no es tan cambiante o que es corta, por ejemplo año, fecha, no un párrafo ya que eso debería ir en una etiqueta.
+-->

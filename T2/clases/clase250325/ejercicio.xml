@@ -1,0 +1,24 @@
+<?xml version="1.0" enconding="UTF-8"?>
+<videoclub>
+  <peliculas>
+    <pelicula>
+      <titulo>El Señor de los Anillos: la Comunidad del Anillo</titulo>
+      <director>Peter Jackson</director>
+      <año>2001</año>
+      <duracion>178</duracion>
+      <genero>Fantasia</genero>
+    </pelicula>
+  </peliculas>
+  <series>
+    <serie>
+      <titulo>Friends</titulo>
+      <temporadas>10</temporadas>
+      <capitulos>236</capitulos>
+    </serie>
+    <serie>
+      <titulo>The Big Bang Theory</titulo>
+      <temporadas>12</temporadas>
+      <capitulos>280</capitulos>
+    </serie>
+  </series>
+</videoclub>
