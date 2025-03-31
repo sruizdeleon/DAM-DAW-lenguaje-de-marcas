@@ -1,0 +1,6 @@
+  <!ELEMENT empleados (empleado+)>
+  <!ELEMENT empleado (nombre, apellido, salario)>
+  <!-- #PCDATA: puede contener una cadena de caracteres -->
+  <!ELEMENT nombre (#PCDATA)>
+  <!ELEMENT apellido (#PCDATA)>
+  <!ELEMENT salario (#PCDATA)>

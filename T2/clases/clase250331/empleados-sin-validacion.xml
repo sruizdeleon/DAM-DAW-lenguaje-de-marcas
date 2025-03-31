@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE empleados SYSTEM "empleados.dtd">
+<empleados>
+  <empleado>
+    <nombre>LUIS</nombre>
+    <apellido>SANCHEZ</apellido>
+    <salario>30000</salario>
+  </empleado>
+</empleados>
