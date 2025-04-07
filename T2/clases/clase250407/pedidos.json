@@ -1,0 +1,67 @@
+{
+  "pedidos": [
+    {
+      "id": "001",
+      "fecha": "2025-03-07",
+      "tipoEnvio": true,
+      "estado": "pendiente",
+      "cliente": {
+        "nombre": "Sergio",
+        "email": "mail1@mail.com",
+        "direccion": {
+          "calle": "Falsa 123",
+          "ciudad": "Madrid",
+          "cp": 28014
+        }
+      },
+      "productos": [
+        { "id": "002", "nombre": "Sudadera","precio": 20.00, "cantidad": 1},
+        { "id": "002", "nombre": "Sudadera","precio": 20.00, "cantidad": 1},
+        { "id": "003", "nombre": "Pantalón","precio": 30.00, "cantidad": 2}
+      ],
+      "precioTotal" : "100.00"
+    },
+    {
+      "id": "002",
+      "fecha": "2025-03-07",
+      "tipoEnvio": false,
+      "estado": "enviado",
+      "cliente": {
+        "nombre": "Juan",
+        "email": "mail2@mail.com",
+        "direccion": {
+          "calle": "Falsa 321",
+          "ciudad": "Madrid",
+          "cp": 28015
+        }
+      },
+      "productos": [
+        { "id": "001", "nombre": "Calcetines","precio": 10.00, "cantidad": 1},
+        { "id": "001", "nombre": "Calcetines","precio": 10.00, "cantidad": 1},
+        { "id": "004", "nombre": "Sobrecamisa","precio": 40.00, "cantidad": 2}
+      ],
+      "precioTotal" : "100.00"
+    },
+    {
+      "id": "003",
+      "fecha": "2025-03-10",
+      "tipoEnvio": true,
+      "estado": null,
+      "cliente": {
+        "nombre": "Sara",
+        "email": "mail3@mail.com",
+        "direccion": {
+          "calle": "Falsa 2",
+          "ciudad": "Barcelona",
+          "cp": 8923
+        }
+      },
+      "productos": [
+        { "id": "002", "nombre": "Sudadera","precio": 20.00, "cantidad": 1},
+        { "id": "002", "nombre": "Sudadera","precio": 20.00, "cantidad": 1},
+        { "id": "003", "nombre": "Pantalón","precio": 30.00, "cantidad": 2}
+      ],
+      "precioTotal" : "100.00"
+    }
+  ]
+}

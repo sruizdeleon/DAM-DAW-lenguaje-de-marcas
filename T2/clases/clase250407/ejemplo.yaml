@@ -1,0 +1,25 @@
+usuarios:
+  - nombre: Jorge
+    edad: 30
+    activo: true
+    hobbies:
+      - deportes
+      - viajar
+      - dormir
+    direccion:
+      calle: Desengaño
+      numero: 21
+      ciudad: Madrid
+    telefono: null
+  - nombre: Juan
+    edad: 31
+    activo: false
+    hobbies:
+      - ligar
+      - salir
+      - caminar
+    direccion:
+      calle: Falsa
+      numero: 23
+      ciudad: Barcelona
+    telefono: 600656565
