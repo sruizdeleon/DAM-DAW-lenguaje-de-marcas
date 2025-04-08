@@ -1,0 +1,36 @@
+{
+  "conciertos": [
+    {
+      "nombreConcierto": "BBK",
+      "fecha": "2025-08-15",
+      "ubicacion": {
+        "ciudad": "Bilbao",
+        "lugar": "Recinto ferial"
+      },
+      "precio": 55.00,
+      "gratuito": false,
+      "categoriasMusica": ["Indie", "Pop", "Rock"],
+      "artistas": [
+        {"nombre": "Marea", "tipoMusica": "Rock"},
+        {"nombre": "Izal", "tipoMusica": "Indie"}
+      ],
+      "estado": null
+    },
+    {
+      "nombreConcierto": "Sonorama",
+      "fecha": "2025-08-10",
+      "ubicacion": {
+        "ciudad": "Cullera",
+        "lugar": "Recinto ferial"
+      },
+      "precio": 65.00,
+      "gratuito": false,
+      "categoriasMusica": ["Indie", "Pop", "Rock"],
+      "artistas": [
+        {"nombre": "Amaral", "tipoMusica": "pop"},
+        {"nombre": "Izal", "tipoMusica": "Indie"}
+      ],
+      "estado": null
+    }
+  ]
+}
